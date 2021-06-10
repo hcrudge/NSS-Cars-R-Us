@@ -1,20 +1,21 @@
 
-import { PaintColors } from "./PaintColor"
-import { InteriorFabrics } from "./InteriorFabric"
+import { PaintColors } from "./PaintColor.js"
+import { InteriorFabrics } from "./InteriorFabric.js"
 import { Technology } from "./Technology.js"
-import { Wheels } from "./Wheels"
-// import { addCustomOrder } from "./database.js"
+import { Wheels } from "./Wheels.js"
+import { addCustomOrder } from "./data.js"
+import { Orders} from "./Orders.js"
 
 
-// document.addEventListener(
-//     "click",
-//     (event) => {
-//         if (event.target.id === "orderButton"){
-//            addCustomOrder() 
+document.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id === "orderButton"){
+           addCustomOrder() 
 
-//         }
-//     }
-// )
+        }
+    }
+)
 
 export const CarsRUs = () => {
     return `
