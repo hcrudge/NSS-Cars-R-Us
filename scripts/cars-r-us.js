@@ -3,8 +3,9 @@ import { PaintColors } from "./PaintColor.js"
 import { InteriorFabrics } from "./InteriorFabric.js"
 import { Technology } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
-import { addCustomOrder } from "./data.js"
+import { addCustomOrder, getModels } from "./data.js"
 import { Orders} from "./Orders.js"
+import { Model} from "./Models.js"
 
 
 document.addEventListener(
@@ -39,7 +40,13 @@ export const CarsRUs = () => {
                 ${Wheels()}
             </section>
         </article>
-
+       
+        <article class="model">
+        <section class="model_detail">
+        ${Model()}
+        </section>
+        </article>
+        
         <article>
             <button id="orderButton">Create Custom Order</button>
         </article>

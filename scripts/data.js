@@ -29,13 +29,20 @@ const data = {
         {id: 4, wheel: "18-inch Pair Spoke Black", price: 400 }
 
     ],
+    models:[
+        {id: 1, model: "Car", price: 1 },
+        {id: 2, model: "SUV", price: 1.5 },
+        {id: 3, model: "Truck", price: 2.25 },
+
+    ],
     customOrders: [ 
     {
         id: 1,
         paintId: 3,
         fabricId: 2,
         techId: 3,
-        wheelId: 4
+        wheelId: 4,
+        modelId: 2
     }
     ],
     orderBuilder: {
@@ -57,6 +64,9 @@ export const getTech = () => {
 export const getWheels = () => {
     return data.wheels.map(wheel => ({...wheel}))
 }
+export const getModels = () => {
+    return data.models.map(model => ({...model}))
+}
 export const getOrders = () => {
     return data.customOrders.map(order => ({...order}))
 }
@@ -72,6 +82,9 @@ export const setTech = (id) => {
 }
 export const setWheel = (id) => {
     data.orderBuilder.wheelId = id
+}
+export const setModel = (id) => {
+    data.orderBuilder.modelId = id
 }
 
 export const addCustomOrder = () => {

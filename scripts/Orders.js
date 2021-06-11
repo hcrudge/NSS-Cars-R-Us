@@ -1,4 +1,4 @@
-import { getPaint, getFabric, getTech, getWheels, getOrders} from "./data.js"
+import { getPaint, getFabric, getTech, getWheels, getOrders, getModels} from "./data.js"
 
 
 export const Orders = () => {
@@ -23,6 +23,7 @@ const buildOrderListItem = (order) => {
     const fabrics = getFabric()
     const tech = getTech()
     const wheels = getWheels()
+    const models = getModels()
 
 
 // Remember that the function you pass to find() must return true/false
@@ -46,7 +47,23 @@ const foundWheel = wheels.find(
         return wheel.id === order.wheelId
     }
 )
-const totalCost = foundPaint.price + foundFabric.price + foundTech.price + foundWheel.price
+const foundModel = models.find(
+    (model) =>{
+        return model.id === order.modelId
+    }
+)
+
+let totalCost = 0
+
+if (foundModel.id === 1) {
+    totalCost = foundPaint.price + foundFabric.price + foundTech.price + foundWheel.price
+}
+if (foundModel.id === 2) {
+    totalCost = (foundPaint.price + foundFabric.price + foundTech.price + foundWheel.price) * foundModel.price
+}
+if (foundModel.id === 3) {
+    totalCost = (foundPaint.price + foundFabric.price + foundTech.price + foundWheel.price) * foundModel.price
+}
 
 const costString = totalCost.toLocaleString("en-US", {
     style: "currency",
