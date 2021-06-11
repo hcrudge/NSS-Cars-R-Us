@@ -13,3 +13,20 @@
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
+
+.model{
+    margin: .5em;
+    border: 1px dashed dodgerblue;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+    
+ } 
+ .model_detail li{
+    
+      display: inline;
+  }  
+ 
+  .customOrders {
+      margin: 2rem;
+  }
+     
